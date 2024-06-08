@@ -1,0 +1,18 @@
+.home {
+    transition: background 0.3s; /* Smooth transition */
+    background: var(--bgGradient, linear-gradient(to right, #3a761a, #951313))/* Default gradient background */
+}
+
+.welcome {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    transition: transform 0.3s ease-in-out; /* Smooth transform transition */
+}
+  
+.welcome:hover {
+    transform: scale(1.1); /* Zoom in effect */
+}
