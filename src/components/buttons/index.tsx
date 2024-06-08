@@ -9,7 +9,14 @@ interface ButtonsProps {
     onClick?: () => void;
 }
 
-const Buttons: React.FC<ButtonsProps> = ({text, bgColor = 'transparent', color, type, onClick}) => {
+const Buttons: React.FC<ButtonsProps> = ({ 
+    text, 
+    bgColor = 'transparent', 
+    color, 
+    type, 
+    onClick
+}) => {
+
     return (
         <>
             <Button style={{ color: color, backgroundColor: bgColor}} type={type} onClick={onClick}>{text}</Button>
