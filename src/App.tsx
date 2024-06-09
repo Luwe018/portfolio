@@ -1,31 +1,32 @@
+import "./App.css";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
+import * as Dashboard from "@/pages/dashboard/";
 
-import './App.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import * as Dashboard from '@/pages/dashboard/';
-
-function App() {
-
+const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       children: [
         {
-          path: 'welcome',
-          element: <Dashboard.Welcome />
+          path: "*",
+          element: <Navigate to="welcome" replace />,
         },
         {
-          path: 'details',
-          element: <Dashboard.Details />
-          
-        }
-      ]
-      
-    }
+          path: "welcome",
+          element: <Dashboard.Welcome />,
+        },
+        {
+          path: "details",
+          element: <Dashboard.Details />,
+        },
+      ],
+    },
   ]);
 
+  return <RouterProvider router={router} />;
+};
 
-  return (
-    <RouterProvider router={router} />
-  )
-}
-
-export default App
+export default App;

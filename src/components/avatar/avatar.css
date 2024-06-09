@@ -1,0 +1,14 @@
+.avatar-container {
+  margin: 0.3rem;
+  padding: 0.5rem;
+  border: solid 1px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px; /* Adjust the gap as needed */
+  width: fit-content;
+}
+  
+.name-tag {
+  text-align: left;
+}
